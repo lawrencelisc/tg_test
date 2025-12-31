@@ -1,0 +1,14 @@
+[Unit]
+Description=tg_test
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/app/tg_test
+ExecStart=/usr/local/app/tg_test/venv/bin/python3.12 sub_tg_test.py
+StandardOutput=syslog
+Restart=always
+RestartSec=2
+User=root
+
+[Install]
+WantedBy=multi-user.target
